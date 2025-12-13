@@ -1,15 +1,10 @@
 "impulse-skeleton"
 {
-	"base"		"impulse-reforged"
-	"title"		"impulse: Skeleton"
-	"maps"		"^rp_"
-	"category"	"roleplay"
-	"menusystem"	"1"
-	"author_name"	"Your Name"
-	"author_email"	""
-	"author_url"	""
-	"version"	"1.0"
-	"icon"		""
-	"info"		""
-	"hide"		"0"
+    "base"        "impulse-reforged"
+    "title"       "impulse: Skeleton"
+    "category"    "rp"
+
+    "maps"        "^rp_"
+    "menusystem"  "1"
+    "workshopid"  "3354257069"
 }
