@@ -10,7 +10,7 @@ VENDOR = {}
 VENDOR.Name = "Gun Shop Owner"
 VENDOR.Description = "Sells firearms to licensed citizens."
 VENDOR.Model = "models/player/monk.mdl"
-VENDOR.Class = "gun_store"
+VENDOR.UniqueID = "gun_store"
 
 VENDOR.Items = {
     ["weapon_pistol"] = 500,
@@ -38,4 +38,4 @@ function VENDOR:CanUse(client)
     return true
 end
 
-impulse.Vendor.Register(VENDOR)
+impulse.Vendor:Register(VENDOR)
