@@ -29,6 +29,9 @@ TEAM.cp = true -- This is a law enforcement team
 
 -- BASE LOADOUT (all police get these)
 TEAM.loadout = {
+    "weapon_physgun",
+    "gmod_tool",
+    "impulse_hands",
     "weapon_stunstick",
     -- "weapon_keys",
 }

@@ -29,6 +29,9 @@ TEAM.salaryTime = 300
 
 -- BASE LOADOUT
 TEAM.loadout = {
+    "weapon_physgun",
+    "gmod_tool",
+    "impulse_hands",
     -- "weapon_medkit", -- Example medical tool
 }
 

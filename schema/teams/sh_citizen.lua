@@ -35,6 +35,9 @@ TEAM.salaryTime = 300 -- Seconds between salary payments
 -- LOADOUT
 -- Weapons given on spawn (not inventory items!)
 TEAM.loadout = {
+    "weapon_physgun",
+    "gmod_tool",
+    "impulse_hands",
     -- "weapon_keys", -- Example
 }
 
