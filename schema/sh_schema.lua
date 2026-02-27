@@ -24,3 +24,13 @@ end
 -- - teams/ for faction/class setup
 -- - scripts/hooks/ for game event handling
 -- - plugins/ for modular features
+
+hook.Add("PlayerShouldDropDeathItems", "DebugRagdollItems", function(client, killer)
+    print("PlayerShouldDropDeathItems called for", client, "killed by", killer)
+    return false
+end)
+
+hook.Add("PlayerShouldRagdollDeathItems", "DebugRagdollItems", function(client, killer)
+    print("PlayerShouldRagdollDeathItems called for", client, "killed by", killer)
+    return true
+end)
