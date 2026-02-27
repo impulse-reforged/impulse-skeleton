@@ -24,7 +24,7 @@ end
 function PLUGIN:PlayerInitialSpawn(client)
     -- Wait a bit so the player is fully loaded
     timer.Simple(2, function()
-        if IsValid(client) then
+        if type(client) == "Player" then
             client:Notify("Welcome to " .. (SCHEMA.Name or "the server") .. "!")
             client:Notify("Type /help for a list of commands.")
         end

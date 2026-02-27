@@ -32,7 +32,7 @@ function ITEM:OnUse(client)
 
     -- Remove boost after 30 seconds
     timer.Simple(30, function()
-        if IsValid(client) then
+        if type(client) == "Player" then
             client:SetRunSpeed(oldSpeed)
             client:Notify("The energy boost wore off.")
         end
