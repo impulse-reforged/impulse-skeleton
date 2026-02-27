@@ -1,48 +1,22 @@
---[[
-    ITEM EXAMPLE: Money/Currency
-
-    This shows how to create a money item that can be picked up and used.
---]]
-
-ITEM = {}
+local ITEM = {}
 
 ITEM.Name = "Cash"
-ITEM.Description = "A stack of bills. Can be added to your wallet."
+ITEM.Desc = "A stack of bills. Add it to your wallet."
 ITEM.Model = "models/props/cs_assault/money.mdl"
 ITEM.Weight = 0.1
 ITEM.UniqueID = "money_cash"
 
-ITEM.Stackable = false -- Each stack is separate
+ITEM.CanStack = false
 ITEM.Category = "Currency"
-ITEM.DropOnDeath = true -- Money drops when you die!
+ITEM.DropOnDeath = true
 
--- Money items usually store an amount in metadata
-ITEM.DefaultAmount = 100 -- Default amount if not specified
-
-function ITEM:GetDescription()
-    -- Customize description based on amount stored
-    local amount = self.Amount or self.DefaultAmount
-    return "A stack of bills worth " .. impulse.Config.CurrencySymbol .. amount
-end
+ITEM.Amount = 100
 
 function ITEM:OnUse(client)
-    local amount = self.Amount or self.DefaultAmount
-
-    -- Add money to player's account
-    client:AddMoney(amount)
-    client:Notify("You added " .. impulse.Config.CurrencySymbol .. amount .. " to your wallet.")
-
-    -- Play a sound
+    client:AddMoney(self.Amount)
+    client:Notify("You added " .. impulse.Config.CurrencyPrefix .. self.Amount .. " to your wallet.")
     client:EmitSound("ambient/levels/canals/drip4.wav")
-
-    return true -- Remove the item
+    return true
 end
-
--- Optional: When dropping, preserve the amount
--- function ITEM:OnDrop(client, entity)
---     if IsValid(entity) then
---         entity.Amount = self.Amount
---     end
--- end
 
 impulse.Inventory:RegisterItem(ITEM)
