@@ -6,7 +6,7 @@ ITEM.Model = "models/props/cs_assault/money.mdl"
 ITEM.Weight = 0.1
 ITEM.UniqueID = "money_cash"
 
-ITEM.CanStack = false
+ITEM.CanStack = true
 ITEM.Category = "Currency"
 ITEM.DropOnDeath = true
 
